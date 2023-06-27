@@ -5,13 +5,11 @@
 #include <bits/stdc++.h>
 #include <random>
 #include <chrono>
-#include <mutex>
 #include "rclcpp/rclcpp.hpp"
 #include "boiler_plate_msg/msg/data.hpp"
 class TestPub : public rclcpp::Node
 {
 public:
-  // std::mutex mutex_lock;
   rclcpp::Publisher<boiler_plate_msg::msg::Data>::SharedPtr data_pub;
   std::vector<double> x;
   std::vector<double> y;
