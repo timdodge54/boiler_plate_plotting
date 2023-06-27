@@ -3,3 +3,4 @@ install/
 log/
 venv/
 .vscode/
+.mypy_cache/
