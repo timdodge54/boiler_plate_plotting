@@ -56,7 +56,7 @@ class Plotter_Node(Node):
             # update values
             self.x = list(msg.x)
             self.y = list(msg.y)
-            self.get_logger().info(f"Heard msg: {self.x[-1]}")
+            self.get_logger().debug(f"Heard msg: {self.x[-1]}")
 
     def plt_func(self, _):
         """Add data to axis.

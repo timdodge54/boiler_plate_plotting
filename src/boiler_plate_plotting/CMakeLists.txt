@@ -1,8 +1,6 @@
 cmake_minimum_required(VERSION 3.5)
 project(boiler_plate_plotting)
 
-include_directories(include)
-
 find_package(ament_cmake REQUIRED)
 find_package(ament_cmake_python REQUIRED)
 find_package(rclcpp REQUIRED)
@@ -10,13 +8,13 @@ find_package(rclpy REQUIRED)
 find_package(common_interfaces REQUIRED)
 find_package(boiler_plate_msg REQUIRED)
 
-# include_directories(include)
 add_executable(cpp_rand_gen src/test_pub.cpp)
 ament_target_dependencies(cpp_rand_gen rclcpp boiler_plate_msg)
 
 target_include_directories(cpp_rand_gen PUBLIC
   $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
   $<INSTALL_INTERFACE:include>)
+
 install(TARGETS
   cpp_rand_gen
   DESTINATION lib/${PROJECT_NAME})
