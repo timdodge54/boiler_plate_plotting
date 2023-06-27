@@ -26,7 +26,6 @@ public:
       RCLCPP_INFO(this->get_logger(), "Adding Value");
       std::uniform_real_distribution<double> x_gen(0, 500.0);
       std::uniform_real_distribution<double> y_gen(0, 200.0);
-      // create random start time
       float x_val = x_gen(re);
       float y_val = y_gen(re);
       this->x.push_back(x_val);
